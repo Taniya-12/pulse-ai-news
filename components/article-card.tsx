@@ -26,7 +26,6 @@ export default function ArticleCard({ article, featured = false, delay = 0 }: Ar
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    // Check if article is bookmarked
     const bookmarks = JSON.parse(localStorage.getItem('bookmarkedArticles') || '[]')
     setIsBookmarked(bookmarks.some((b: any) => b.id === article.id))
     setIsLoaded(true)
